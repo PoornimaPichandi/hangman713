@@ -1,7 +1,4 @@
 import random
-#word_list = 0
-#word = 0
-#list_of_guesses = []
 class Hangman:
     def __init__(self, word_list, num_lives = 5):
         self.word = random.choice(word_list)       
