@@ -24,7 +24,7 @@ class Hangman:
         The number of UNIQUE letters in the word that have not been guessed yet
     num_lives: int
         The number of lives the player has
-    list_of_guesses: list
+    list_of_guess: list
         A list of the letters that have already been tried
 
     Methods:
@@ -60,7 +60,7 @@ class Hangman:
             for i,letter in enumerate(self.word):                
                 if letter == guess:
                     self.word_guessed[i]=guess
-            self.num_letters = len(set(self.word) - set(self.word_guessed))
+            self.num_letters = len(set(self.word) - set(self.word_guessed)) 
         else:
             self.num_lives-=1
             print(f"Sorry, {guess} is not in the word.")
@@ -105,6 +105,6 @@ def play_game(word_list):
             break
 
 word_list = ['Mango','Apple','cherry','kiwi','orange'] 
-play_game(word_list) 
+play_game(word_list) ##calling play_game method and passing the wordlist argument
 
         
